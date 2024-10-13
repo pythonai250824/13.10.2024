@@ -52,5 +52,38 @@ for x in range(1, 100 + 1):
                 list_prime.append(x)
 print(list_prime)
 
+list_rishoni: list[int] = []
+list_rishoni_comp: list[int] = []
+
+for x in range(2, 100 + 1):
+
+    list_divs: list[int] = []
+    #   9  9  9  9
+    #   2  3  4  5
+    # [ 1, 0, 1, 4, 3, 2, 1]
+    #   7
+    #   2  3  4  5  6
+    # [ 1, 1, 3, 2, 1]
+
+    for i in range(2, x):
+        list_divs.append(x % i)
+    if all(list_divs): # if true the number is prime
+        list_rishoni.append(x)
+    if all([x % i for i in range(2, x)]):
+        list_rishoni_comp.append(x)
+
+print(list_rishoni)
+print(list_rishoni_comp)
+
+#  [append(x)   for x in 2.. 100              check if rishoni]
+print([x       for x in range(2, 100 + 1)     if all([x % i for i in range(2, x)])])
+
+# without str
+# input a number and print how many digits the number has
+
+
+
+
+
 
 

@@ -18,7 +18,7 @@ print('5 randoms', five_random)
 #     new_element: int = random.randint(-2, 2)
 #     five_random.append(new_element)
 
-print('all not zero', all(five_random))
+print('not all zero', any(five_random))
 
 print('any not zero', any(five_random))
 
